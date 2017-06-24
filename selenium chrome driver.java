@@ -12,6 +12,10 @@ driver = new ChromeDriver();
 driver.navigate().to("https://www.google.com/");
 //driver.get("https://www.google.com/");
 
+// compare the content of element...
+##############################################
+Assert.assertEquals(actualTitle, expectedTitle);
+
 // maximize the browser window...
 ##########################################
 
