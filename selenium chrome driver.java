@@ -30,6 +30,27 @@ driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 WebDriverWait myWait = new WebDriverWait(driver, 10);
 myWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='rso']/div[1]/div/div/div/div/h3/a")));
 
+// Fulent wait...
+------------------------------
+FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
+		wait.pollingEvery(4, TimeUnit.SECONDS);
+		wait.withTimeout(30, TimeUnit.SECONDS);
+		wait.ignoring(NoSuchElementException.class); // We need to ignore this
+														// exception.
+ 
+		Function<WebDriver, WebElement> function = new Function<WebDriver, WebElement>() {
+			public WebElement apply(WebDriver arg0) {
+				System.out.println("Checking for the object!!");
+				WebElement element = arg0.findElement(By.xpath("//*[@id='rso']/div[1]/div/div/div/div/h3/a"));
+				if (element != null) {
+					System.out.println("A new dynamic object is found.");
+				}
+				return element;
+			}
+		};
+ 
+		wait.until(function);	
+
 
 // get the actual value of the page  title...
 #######################################################
