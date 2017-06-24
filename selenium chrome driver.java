@@ -62,6 +62,12 @@ tagName = driver.findElement(By.id("email")).getTagName();
 output:
 ------------
 input  <tag>
+
+// Find element by findElement function
+#############################################
+WebElement ll = driver.findElement(By.xpath("//*[@id='loginbutton']"));
+	    ll.sendKeys("skkkkkkk");
+
 	
 // Locating elements the element of page	
 ################################################################
