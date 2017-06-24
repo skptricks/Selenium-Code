@@ -29,6 +29,29 @@ driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 --------------------------
 WebDriverWait myWait = new WebDriverWait(driver, 10);
 myWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='rso']/div[1]/div/div/div/div/h3/a")));
+
+
+// get the actual value of the page  title...
+#######################################################
+        actualTitle = driver.getTitle();  // get page title
+        /*
+         * compare the actual title of the page with the expected one and print
+         * the result as "Passed" or "Failed"
+         */
+        if (actualTitle.contentEquals(expectedTitle)){
+            System.out.println("Test Passed!");
+        } else {
+            System.out.println("Test Failed");
+        }
+       
+        //close the window
+        driver.close();
+       
+        // exit the program explicitly
+        System.exit(0);
+
+//
+########################################################
 	    
 
 
