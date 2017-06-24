@@ -21,7 +21,14 @@ driver.manage().window().maximize();  // maximize window
 // Web driver implicit and explict wait...
 ######################################################
 
+//Create implicit wait
+--------------------------
 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+//Create explicit wait
+--------------------------
+WebDriverWait myWait = new WebDriverWait(driver, 10);
+myWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='rso']/div[1]/div/div/div/div/h3/a")));
 	    
 
 
