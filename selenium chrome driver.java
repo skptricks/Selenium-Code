@@ -84,6 +84,21 @@ By.partialLinkText	locates elements that contain the given link text	        fin
 By.tagName	locates elements by their tag name	                                findElement(By.tagName("div"))  
 By.xpath	locates elements via XPath	                                        findElement(By.xpath("//html/body/div/tr[5]"))
 
-	
 
+Few useful function....
+##############################
+// WebDriver provides these useful get commands:
+--------------------------------------------
+get()
+getTitle()
+getPageSource()
+getCurrentUrl()
+getText()
+	
+// WebDriver provides these useful navigation commands
+----------------------------------------------------
+navigate().forward()
+navigate().back()
+navigate().to()
+navigate().refresh()
 
