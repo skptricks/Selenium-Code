@@ -14,6 +14,6 @@ TestListenerAdapter tla = new TestListenerAdapter();
 		TestNG testng = new TestNG();
 		List<String> suites = Lists.newArrayList();
 		//suites.add("D:\\selenium_sumit\\Workspace\\SeleniumTestNG\\ParameteriseUsingXML\\XMLdata.xml");//path to xml..
-		suites.add("/SeleniumTestNG/ParameteriseUsingXML/XMLdata.xml");
+		suites.add(new java.io.File("").getAbsolutePath()+"/ParameteriseUsingXML/XMLdata.xml");
 		testng.setTestSuites(suites);
 		testng.run();
